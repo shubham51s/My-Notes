@@ -1,0 +1,36 @@
+
+
+# Schema:
+
+    Think of a Schema as a Blueprint
+    It tells Mongoose how a document should be shaped
+
+    1 Virtuals -> 
+        Virtual are document properties that you can get and set but that do not saved in DB.   
+        to use it in schema set toJSON: { virtuals: true } in document
+
+    2. Validation -> 
+        validation is defined in the schema type
+        validation is middleware. Mongoose registers validation as a pre('save') hook on every schema by default.
+        Validation always runs as the first pre('save') hook. This means that validation doesn't run on any changes you make in pre('save') hooks.
+        You can disable automatic validation before save by setting the validateBeforeSave option
+        The unique Option is Not a Validator
+
+# Models:
+
+    A model is a class with which we construct documents with properties and behaviours as declared in our schema.
+
+# Mongoose Middleware (hooks):
+    Middleware are useful for atomizing model logic
+
+    Mongoose has 4 types of middleware
+        1. document middleware
+        2. model middleware
+        3. aggrgate middleware
+        4. query middleware
+
+    Pre middleware: 
+        pre middleware functions are executed one after another, when each middleware calls next.
+    
+    Post middleware:
+        post middleware are executed after the hooked method and all of its pre middleware have completed.
