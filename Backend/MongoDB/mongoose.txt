@@ -34,3 +34,8 @@
     
     Post middleware:
         post middleware are executed after the hooked method and all of its pre middleware have completed.
+
+#Populate: 
+
+    Population is the process of automatically replacing the specified path in the document with document from other colletions
+    We may populate a single document, multiple documents, a plain object, multiple plain objects, or all objects returned from a query
