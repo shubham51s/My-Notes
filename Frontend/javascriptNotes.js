@@ -1,4 +1,9 @@
 /*
+    # JavaScript:
+
+    - JavaScript is a programming language used to create dynamic content for websites. It is a lightweight, cross-platform, and single-threaded programming language. It's an interpreted language that executes code line by line, providing more flexibility.
+    - Object-oriented and event-driven language, ideal for building scalable and responsive applications.
+
 
     # 1. Variables (var, let & const):
         1. var (legacy keyword):
@@ -106,6 +111,7 @@ user1.getName();
 
 /*
 
-    # 6 Hoisting: 
-    
+    # 6 Hoisting:
+        - Hoisting refers to the behavior where JavaScript moves the declarations of variables, functions, and classes to the top of their scope during the compilation phase.
+
 */
