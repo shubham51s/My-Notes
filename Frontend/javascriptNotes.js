@@ -52,35 +52,41 @@
             - IIFEs are commonly used to create private scope
 
     # DOM (Document Object Model):
-        - The DOM is the programming interface for web documents. It represents the page so that program can change the document structure, style & content. The DOM represents the document as nodes & objects that way programming languages can interact with the page
+		DOM stands for Document Object Model. It is a programming interface that allows us to create, change, or remove elements from the document. We can also add events to these elements to make our page more dynamic
 
-        
-        https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+		The DOM views an HTML document as a tree of nodes. A node represents an HTML element.
 
+		When a web page is loaded, the browser creates a Document Object Model of the page.
+		The HTML DOM model is constructed as a tree of Objects
+		The DOM is not part of the JavaScript language, but is instead a Web API used to build websites.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		With the object model, JavaScript gets all the power it needs to create dynamic HTML:
+			JavaScript can change all the HTML elements, HTML attributes, all the CSS in the page
+			JavaScript can remove existing HTML elements and attributes
+			JavaScript can add new HTML elements and attributes
+			JavaScript can react to all existing HTML events in the page
+			JavaScript can create new HTML events in the page
 */
+
+// # Prototypes in JS:
+
+// 		Prototypes are the mechanism by which JavaScript objects inherit features from one another.
+// 		In JavaScript, every object has an internal link to another object called its prototype. This prototype object can have properties and methods that are shared across all objects that inherit from it.
+
+// example
+function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.getName = function () {
+  console.log(this.name);
+};
+
+const user1 = new Person("user-1");
+user1.getName();
+
+// here in above code getName is not stored separately while creating new object but it defined in Person's prototype so all instances created from Person object can access it
+
+// # Prototype chain:
+// 		The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. The chain ends when we reach a prototype that has null for its own prototype.
+// 		When you try to access a property of an object: if the property can't be found in the object itself, the prototype is searched for the property. If the property still can't be found, then the prototype's prototype is searched, and so on until either the property is found, or the end of the chain is reached, in which case undefined is returned.
